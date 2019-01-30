@@ -24,8 +24,8 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <Button Width="100" Click="Login">로그인</Button>
-                <Button Width="100" Click="CreateUser" Margin="50,0,0,0">새 계정 만들기</Button>
+                <Button Width="100">로그인</Button>
+                <Button Width="100" Margin="50,0,0,0">새 계정 만들기</Button>
             </StackPanel>
 
         </StackPanel>
