@@ -3,10 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:r="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
         xmlns:local="clr-namespace:LionStudents"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <r:Ribbon DockPanel.Dock="Top">
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu SmallImageSource="image/새자산 3.svg">
+                    <RibbonApplicationMenuItem Name="Open" Header="새로 열기" ImageSource="image/고자산 18.png" />
+                    <RibbonApplicationMenuItem Name="Setting" Header="환경설정" ImageSource="image/고자산 5.png" />
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+        </r:Ribbon>
+    </DockPanel>
 </Window>
