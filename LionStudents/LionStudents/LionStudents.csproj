@@ -102,15 +102,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Resource Include="image\Logo.png" />
-=======
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Logo.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
->>>>>>> login
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
