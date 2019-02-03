@@ -3,18 +3,50 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:r="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
         xmlns:local="clr-namespace:LionStudents"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="LionStudent" Height="850" Width="660">
     <DockPanel>
-        <r:Ribbon DockPanel.Dock="Top">
-            <Ribbon.ApplicationMenu>
-                <RibbonApplicationMenu SmallImageSource="image/새자산 3.svg">
-                    <RibbonApplicationMenuItem Name="Open" Header="새로 열기" ImageSource="image/고자산 18.png" />
-                    <RibbonApplicationMenuItem Name="Setting" Header="환경설정" ImageSource="image/고자산 5.png" />
-                </RibbonApplicationMenu>
-            </Ribbon.ApplicationMenu>
-        </r:Ribbon>
+        <Menu DockPanel.Dock="Top" Height="26">
+            <MenuItem Header="File">
+                <MenuItem Click="OnMenuNew" Header="New" InputGestureText="Ctrl+N" />
+                <MenuItem Click="OnMenuOpen" Header="Open" InputGestureText="Ctrl+O" />
+                <Separator/>
+                <MenuItem Click="OnMenuSave" Header="Save" InputGestureText="Ctrl+S" />
+                <MenuItem Click="OnMenuSaveas" Header="Save as" InputGestureText="Ctrl+Shift+S"/>
+                <Separator/>
+                <MenuItem Click="OnMenuTransfer" Header="Transfer" InputGestureText="Shift+S"/>
+                <MenuItem Click="OnMenuQuit" Header="Quit" InputGestureText="Ctrl+Q"/>
+
+            </MenuItem>
+
+            <MenuItem Header="Edit">
+                <MenuItem Click="Undo" Header="Undo" InputGestureText="Ctrl+Z" />
+                <MenuItem Click="Redo" Header="Redo" InputGestureText="Ctrl+Shift+Z" />
+                <Separator/>
+                <MenuItem Click="Cut" Header="Cut" InputGestureText="Ctrl+X"/>
+                <MenuItem Click="Copy" Header="Copy" InputGestureText="Ctrl+C"/>
+                <MenuItem Click="Paste" Header="Paste" InputGestureText="Ctrl+V"/>
+                <MenuItem Click="SelectAll" Header="Select All" InputGestureText="Ctrl+A"/>
+                <Separator/>
+                <MenuItem Click="Find" Header="Find" InputGestureText="Ctrl+F"/>
+
+            </MenuItem>
+            
+            <MenuItem Header="View">
+                <MenuItem Name="ViewReport" Click="OnMenuReport" IsCheckable="true" IsChecked="True"
+                          Header="Report" />
+                <MenuItem Name="ViewLifeDoc" Click="OnMenuLifeDoc" IsCheckable="true" IsChecked="True"
+                          Header="Life document" />
+                <MenuItem Name="ViewConsult" Click="OnMenuConsult" IsCheckable="true" IsChecked="True"
+                          Header="consultation" />
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Click="OnMenuAbout" Header="About" />
+            </MenuItem>
+        </Menu>
+        <Grid ShowGridLines="False">
+            
+        </Grid>
     </DockPanel>
 </Window>
