@@ -10,26 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LionStudents
 {
     /// <summary>
-    /// Login.xaml에 대한 상호 작용 논리
+    /// CreateUser.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class Login : Window
+    public partial class CreateUser : Page
     {
-        public Login()
+        public CreateUser()
         {
             InitializeComponent();
         }
-
-        private void CreateUser(object sender, RoutedEventArgs e)
-        {
-            CreateUser CreateUserpage = new CreateUser();
-            CreateUserpage.Title = "Create User";
-            this.Content = CreateUserpage;
-        }
-
     }
 }

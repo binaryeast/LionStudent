@@ -46,7 +46,9 @@
             </MenuItem>
         </Menu>
         <Grid ShowGridLines="False">
-            
+            <StackPanel>
+                
+            </StackPanel>
         </Grid>
     </DockPanel>
 </Window>
